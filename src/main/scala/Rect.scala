@@ -1,4 +1,4 @@
-class Rect(a: Int, b: Int, center: (Int, Int)) extends Figura(center) {
+case class Rect(a: Int, b: Int, center: (Int, Int)) extends Figura(center) {
   def this(a: Int, b: Int) = this(a, b, (0, 0))
 
   def area(): Double = a.toDouble * b.toDouble
@@ -7,7 +7,7 @@ class Rect(a: Int, b: Int, center: (Int, Int)) extends Figura(center) {
     s"\narea ${area()}"
 }
 
-class RectEx(a: Int, b: Int) extends FiguraEx {
+case class RectEx(a: Int, b: Int) extends FiguraEx {
   def this(a: Int) = this(a, a)
 
   override def area: Double = a.toDouble * b.toDouble

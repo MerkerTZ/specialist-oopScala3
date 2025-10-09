@@ -1,6 +1,6 @@
-class Triangle(a:Int, b:Int, c:Int) extends FiguraEx{
+case class Triangle(a:Int, b:Int) extends FiguraEx{
 
   override def getFigureEx: String = s"Triangle area $area"
 
-  override def area: Double = a * b * c
+  override def area: Double = a * b * 0.5
 }

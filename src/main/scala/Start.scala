@@ -15,7 +15,10 @@ abstract class FiguraEx():
 
   def getCenter = center
 
-  def getFigureEx:String
+  override def toString: String = getFigureEx
+
+  def getFigureEx: String
+
   def area:Double
 
 object Start {
@@ -31,7 +34,7 @@ object Start {
     //    val f = Rect(3,10)
     //    println(f.getRect)
 
-    val r = RectEx(3)
+    val r = RectEx(3,3)
     r.move(3, -5)
     //    println(r.getRect)
     //    println(r.getRect)
@@ -39,7 +42,8 @@ object Start {
     var c = Circle(1)
     //    println(c.getCircle)
 
-    val arr = Array[FiguraEx](r, c, r, Triangle(1,2,3))
-    areas(arr)
+    val arr = Map[FiguraEx, Int] (r->1, c->2, Triangle(1,2)->4)
+    arr.foreach(println(_))
+    println(arr(Triangle(1,2)))
   }
 }
