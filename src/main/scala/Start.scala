@@ -6,7 +6,7 @@ class Figura(private var center: (Int, Int)):
   def getCenter = center
 
 
-class FiguraEx():
+abstract class FiguraEx():
   var center = (0, 0)
 
   def move(dx: Int, dy: Int) = center = (center._1 + dx, center._2 + dy)
@@ -15,7 +15,8 @@ class FiguraEx():
 
   def getCenter = center
 
-  def getFigureEx:String = s"$getCenter"
+  def getFigureEx:String
+  def area:Double
 
 object Start {
   def areas(d: Array[FiguraEx]) =
@@ -38,7 +39,7 @@ object Start {
     var c = Circle(1)
     //    println(c.getCircle)
 
-    val arr = Array[FiguraEx](r, c, r)
+    val arr = Array[FiguraEx](r, c, r, Triangle(1,2,3))
     areas(arr)
   }
 }

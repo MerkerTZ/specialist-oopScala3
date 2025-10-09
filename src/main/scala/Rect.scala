@@ -10,7 +10,7 @@ class Rect(a: Int, b: Int, center: (Int, Int)) extends Figura(center) {
 class RectEx(a: Int, b: Int) extends FiguraEx {
   def this(a: Int) = this(a, a)
 
-  def area(): Double = a.toDouble * b.toDouble
+  override def area: Double = a.toDouble * b.toDouble
 
-  override def getFigureEx: String = s"Rectangle long: $a, short: $b, center: ${getCenter} area ${area()}"
+  override def getFigureEx: String = s"Rectangle long: $a, short: $b, center: ${getCenter} area ${area}"
 }
