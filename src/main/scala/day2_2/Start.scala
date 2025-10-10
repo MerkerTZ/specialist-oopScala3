@@ -1,3 +1,5 @@
+package day2_2
+
 class Start
 
 class Figura(private var center: (Int, Int)):
@@ -7,7 +9,7 @@ class Figura(private var center: (Int, Int)):
 
 
 abstract class FiguraEx():
-  var center = (0, 0)
+  private var center = (0, 0)
 
   def move(dx: Int, dy: Int) = center = (center._1 + dx, center._2 + dy)
 

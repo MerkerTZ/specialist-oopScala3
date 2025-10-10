@@ -1,3 +1,5 @@
+package day2_2
+
 case class Rect(a: Int, b: Int, center: (Int, Int)) extends Figura(center) {
   def this(a: Int, b: Int) = this(a, b, (0, 0))
 
